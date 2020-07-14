@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0.0 0.0 348.0 348.0"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Binary.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="1.3563218"
+     inkscape:cx="30.794508"
+     inkscape:cy="163.18469"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6"
+     showguides="false" />
+  <path
+     d="M5.079 5.776h336.913v337.67H5.08z"
+     stroke-width="2"
+     stroke="#000"
+     id="path2" />
+  <path
+     d="M282.734 40.554c0-8.376 6.966-15.165 15.56-15.165 4.126 0 8.084 1.597 11.001 4.441 2.918 2.844 4.558 6.702 4.558 10.724 0 8.376-6.966 15.165-15.56 15.165-8.593 0-15.559-6.79-15.559-15.165z"
+     stroke-width="2"
+     stroke="#000"
+     id="path4" />
+  <rect
+     style="fill:#000000"
+     id="rect3723"
+     width="193.16949"
+     height="61.932205"
+     x="28.016949"
+     y="22.855932" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:29.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="51.398304"
+     y="62.826263"
+     id="text3727"><tspan
+       sodipodi:role="line"
+       id="tspan3725"
+       x="51.398304"
+       y="62.826263">&lt;Screen&gt;</tspan></text>
+  <rect
+     style="fill:#000000"
+     id="rect3729"
+     width="49.398304"
+     height="52.347458"
+     x="27.279661"
+     y="98.796608" />
+  <rect
+     style="fill:#000000"
+     id="rect3729-9"
+     width="49.398304"
+     height="52.347458"
+     x="99.165253"
+     y="99.902542" />
+  <rect
+     style="fill:#000000"
+     id="rect3729-3"
+     width="49.398304"
+     height="52.347458"
+     x="172.15678"
+     y="99.902534" />
+  <rect
+     style="fill:#000000"
+     id="rect3761"
+     width="277.95764"
+     height="44.974575"
+     x="27.279661"
+     y="182.11017" />
+  <rect
+     style="fill:#000000"
+     id="rect3761-7"
+     width="277.95764"
+     height="44.974575"
+     x="27.648298"
+     y="254.73305" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:29.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="122.38984"
+     y="215.07626"
+     id="text3780"><tspan
+       sodipodi:role="line"
+       id="tspan3778"
+       x="122.38984"
+       y="215.07626">Send</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:29.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="66.980583"
+     y="285.44989"
+     id="text3780-5"><tspan
+       sodipodi:role="line"
+       id="tspan3778-6"
+       x="66.980583"
+       y="285.44989">Useless button</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40.27092743px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.83897763"
+     x="41.185783"
+     y="132.85193"
+     id="text3802"
+     transform="scale(0.95530674,1.0467842)"><tspan
+       sodipodi:role="line"
+       id="tspan3800"
+       x="41.185783"
+       y="132.85193"
+       style="stroke-width:0.83897763">0</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:42.66223145px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.88879651"
+     x="110.81703"
+     y="139.63399"
+     id="text3802-9"
+     transform="scale(0.99337934,1.0066648)"><tspan
+       sodipodi:role="line"
+       id="tspan3800-3"
+       x="110.81703"
+       y="139.63399"
+       style="stroke-width:0.88879651">1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:41.2959938px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.8603332"
+     x="195.34837"
+     y="132.78822"
+     id="text3802-1"
+     transform="scale(0.93974823,1.0641148)"><tspan
+       sodipodi:role="line"
+       id="tspan3800-1"
+       x="195.34837"
+       y="132.78822"
+       style="stroke-width:0.8603332">R</tspan></text>
+  <rect
+     style="fill:#000000"
+     id="rect40"
+     width="228.94978"
+     height="30.929045"
+     x="56.695885"
+     y="260.2843" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;"
+     x="138.24153"
+     y="283.85593"
+     id="text44"><tspan
+       sodipodi:role="line"
+       id="tspan42"
+       x="138.24153"
+       y="327.6478" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;"
+     x="129.76273"
+     y="270.21609"
+     id="text48"><tspan
+       sodipodi:role="line"
+       id="tspan46"
+       x="129.76273"
+       y="314.00797" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:42.66666667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;"
+     x="130.5"
+     y="282.38135"
+     id="text52"><tspan
+       sodipodi:role="line"
+       id="tspan50"
+       x="130.5"
+       y="326.17322" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:48px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;"
+     x="130.86865"
+     y="294.5466"
+     id="text60"><tspan
+       sodipodi:role="line"
+       id="tspan58"
+       x="130.86865"
+       y="338.33847" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+     x="49.343216"
+     y="288.49155"
+     id="text64"><tspan
+       sodipodi:role="line"
+       id="tspan62"
+       x="49.343216"
+       y="288.49155">Useless button</tspan></text>
+</svg>
