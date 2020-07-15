@@ -26,7 +26,7 @@ public class Binary : MonoBehaviour {
         "GUT", "HAD", "HAT", "HOT", "ICE", "LIE", "LIT", "MAD", "MAP", "MAY", "NEW", "NOT", "NOW", "ONE", "PAY", "PHI", "PIE", "PSI", "RED", "RHO",
         "SAD", "SAY", "SEA", "SEE", "SET", "SIX", "SKY", "TAU", "THE", "TOO", "TWO", "WHY", "WIN", "YES", "ZOO", "ALFA", "BETA",  "BLUE", "CHAT",
         "CYAN", "DEMO", "DOOR", "EAST", "EASY", "EACH", "EDIT", "FAIL", "FALL", "FIRE", "FIVE", "FOUR", "GAME", "GOLF", "GRID", "HARD", "HATE", "HELP",
-        "HOLD", "IOTA", "KILO", "LIMA", "LIME", "LIST", "LOCK", "STOP", "TEST", "TIME", "TREE", "TYPE", "WEST", "WIRE", "WOOD", "XRAY", "YELL", "ZERO",
+        "HOLD", "IOTA", "KILO", "LIMA", "LIME", "LIST", "LOCK", "LOST", "STOP", "TEST", "TIME", "TREE", "TYPE", "WEST", "WIRE", "WOOD", "XRAY", "YELL", "ZERO",
         "ZETA", "ZULU", "ABORT", "ABOUT", "ALPHA", "BLACK", "BRAVO", "CLOCK", "CLOSE", "COULD", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
     "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "LEAST", "LEMON", "MONTH", "MORSE", "NORTH", "OMEGA",
     "OSCAR", "PANIC", "PRESS", "ROMEO", "SEVEN", "SIGMA", "SMASH", "SOUTH", "TANGO", "TIMER", "VOICE", "WHILE",
