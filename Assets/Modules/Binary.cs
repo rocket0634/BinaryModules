@@ -85,7 +85,17 @@ public class Binary : MonoBehaviour {
             active = true;
         };
     }
-
+    void Update()
+    {
+        if (text != "")
+        {
+            Slovo.text = "";
+        }
+        if (text == "")
+        {
+            Slovo.text = wordList[te];
+        }
+    }
     private bool vc(string c)
     {
         GetComponent<KMSelectable>().AddInteractionPunch();
@@ -129,8 +139,11 @@ public class Binary : MonoBehaviour {
         {
             Module.HandleStrike();
             GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.Strike, transform);
-            Debug.LogFormat("[Binary #{0}] Expected: {1}", _moduleID, match);
+            Debug.LogFormat("[Binary #{0}] Incorrect answer. Expected: {1}", _moduleID, match);
+            Debug.LogFormat("[Binary #{0}] Resetting module", _moduleID);
             text = "";
+            te = UnityEngine.Random.Range(0, 202);
+            Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, wordList[te]);
         }
     }
 
