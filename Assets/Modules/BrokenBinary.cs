@@ -53,10 +53,10 @@ public class BrokenBinary : MonoBehaviour
     public char shifted;
     Random rnd = new Random();
 
-    public string[] WordList = { "GHOST", "GIANT",  "ULTRA", "SUPER",
+    public string[] _WordList = { "GHOST", "GIANT",  "ULTRA", "SUPER",
         "HYPER", "INDIA", "APLHA", "SIMON",
     "STICK", "MARIO", "LUCKY", "DISCO", "BRAVO",
-    "ABORT", "ABOUT", "BLACK"," BEAST", "CLOCK", "CLOSE", "COULD", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
+    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "COULD", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
     "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "LEMON", "MONTH", "MORSE", "NORTH", "OMEGA",
     "OSCAR", "PANIC", "PRESS", "ROMEO", "SEVEN", "SIGMA", "SMASH", "SOUTH", "TANGO", "TIMER", "VOICE", "WHILE",
     "WHITE", "WORLD", "WORRY", "WOULD"};
@@ -73,7 +73,7 @@ public class BrokenBinary : MonoBehaviour
             
             _moduleID = _moduleIDCounter++;
             awaked = true;
-            word = WordList[Random.Range(0, 53)];
+            word = _WordList[Random.Range(0, 53)];
             for (int i = 0; i < 5; i++)
             {
                 char c = word[i];
@@ -270,7 +270,7 @@ public class BrokenBinary : MonoBehaviour
                 c5 = false;
                 stepcycle = -1;
 
-                word = WordList[Random.Range(0, 53)];
+                word = _WordList[Random.Range(0, 53)];
                 for (int i = 0; i < 5; i++)
                 {
                     char c = word[i];
@@ -309,7 +309,7 @@ public class BrokenBinary : MonoBehaviour
             c5 = false;
             stepcycle = -1;
             Slovo.text = "";
-            word = WordList[Random.Range(0, 53)];
+            word = _WordList[Random.Range(0, 53)];
 
             for (int i = 0; i < 5; i++)
             {
@@ -348,7 +348,7 @@ public class BrokenBinary : MonoBehaviour
     public IEnumerator ProcessTwitchCommand(string command)
     {
         var tokens = command.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        if (tokens.Length == 0 || tokens.Length == 6) yield break;
+        if (tokens.Length == 0 || tokens.Length >= 6) yield break;
         var indices = new List<int>();
         foreach (var token in tokens)
         {

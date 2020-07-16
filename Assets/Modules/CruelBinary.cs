@@ -269,8 +269,12 @@ public class CruelBinary : MonoBehaviour
                 yield break;
             }
         }
-        else if (split[0].StartsWith("submit") && split[1].Length == 8 && read == true && split.Length == 2)
+        else if (split[0].StartsWith("submit") &&  read == true && split.Length == 2)
         {
+            if (split[1].Length != 8)
+            {
+                yield break;
+            }
             string code = split[1];
             if (code.Any(letters => !letters.EqualsAny('0', '1')))
             {
@@ -285,6 +289,7 @@ public class CruelBinary : MonoBehaviour
             Send.OnInteract();
             yield return false;
         }
+
     }
     private IEnumerator TwitchHandleForcedSolve()
     {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: mission 2
   m_EditorClassIdentifier: 
   DisplayName: Broken Binary
-  Description: Fix it or it will broke you.
+  Description: YnJva2VuIGxpa2UgdGhlc2UgdGV4dA==
   GeneratorSetting:
     TimeLimit: 600
     NumStrikes: 3

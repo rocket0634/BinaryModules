@@ -64,7 +64,7 @@ public class FautlyBinary : MonoBehaviour {
         "54", "104", "108", "82", "88", "68", "99", "126", "32", "90",
         "79", "85", "106", "109", "37", "37", "63", "50", "65", "91" };
     private int _moduleID;
-    private int _moduleIDCounter = 1;
+    private static int _moduleIDCounter = 1;
     // Use this for initialization
     void Awake ()
     {

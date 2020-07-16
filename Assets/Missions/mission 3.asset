@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: mission 3
   m_EditorClassIdentifier: 
   DisplayName: Faulty Binary
-  Description: Press zero. I meant another zero!
+  Description: Press zero. Oh wait another zero!
   GeneratorSetting:
     TimeLimit: 600
     NumStrikes: 3
@@ -20,7 +20,7 @@ MonoBehaviour:
     FrontFaceOnly: 1
     OptionalWidgetCount: 5
     ComponentPools:
-    - Count: 1
+    - Count: 5
       AllowedSources: 2
       ComponentTypes: 
       SpecialComponentType: 0

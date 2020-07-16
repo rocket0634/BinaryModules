@@ -17,6 +17,7 @@ public class Binary : MonoBehaviour {
     public Color[] _colors;
     public bool mgled;
     public bool mgling;
+    string solved = "Solved";
 
     private string text;
     public List<string> wordList = new List<string>
@@ -86,14 +87,18 @@ public class Binary : MonoBehaviour {
         };
     }
     void Update()
-    {
-        if (text != "")
+    { 
+        if(!active || sol || mgling)
         {
-            Slovo.text = "";
+            return;
         }
         if (text == "")
         {
             Slovo.text = wordList[te];
+        }
+        else
+        {
+            Slovo.text = "";
         }
     }
     private bool vc(string c)
@@ -107,10 +112,11 @@ public class Binary : MonoBehaviour {
         {
             case "0":
             case "1":
-                text += c;
+                text += c;       
                 break;
             case "r":
                 text = "";
+                Slovo.text = wordList[te];
                 Debug.LogFormat("[Binary #{0}] The module has been reset.", _moduleID);
                 break;
         }
@@ -129,11 +135,11 @@ public class Binary : MonoBehaviour {
         string match = CheckBinary(wordList[te]);
         if (text == match)
         {
+            sol = true;
             text = "";
             GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.CorrectChime, transform);
-            Module.HandlePass();
-            Slovo.text = "";
-            sol = true;
+            Module.HandlePass();      
+            StartCoroutine(SolveAnim());
         }
         else
         {
@@ -144,6 +150,7 @@ public class Binary : MonoBehaviour {
             text = "";
             te = UnityEngine.Random.Range(0, 202);
             Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, wordList[te]);
+            Slovo.text = wordList[te];
         }
     }
 
@@ -174,7 +181,14 @@ public class Binary : MonoBehaviour {
         Slovo.text = wordList[te];
         Slovo.color = _colors[3];
     }
-
+    IEnumerator SolveAnim()
+    {
+        for (int i = 0; 7 > i; i++)
+        {
+            yield return new WaitForSeconds(0.05f);
+            Slovo.text = solved.Substring(0, i);
+        }
+    }
     // This is read by the Twitch Plays mod.
     // You can find more information here: https://github.com/samfun123/KtaneTwitchPlays/wiki/External-Mod-Module-Support
     private string TwitchHelpMessage = "!{0} submit 01 [submits the code 01], !{0} press useless button [pressing useless button]";
@@ -185,7 +199,7 @@ public class Binary : MonoBehaviour {
         var split = command.Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
         if (split.Length == 3 && split[0].StartsWith("press") && split[1].StartsWith("useless") && split[2].StartsWith("button"))
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             NotSend.OnInteract();
             if (!mgled)
             {
@@ -212,6 +226,7 @@ public class Binary : MonoBehaviour {
 
             foreach (var letter in code)
             {
+                yield return new WaitForSeconds(0.03f);
                 yield return null;
                 KMSelectable button = null;
                 switch (letter)
