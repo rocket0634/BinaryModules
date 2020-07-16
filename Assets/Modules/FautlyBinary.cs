@@ -40,6 +40,7 @@ public class FautlyBinary : MonoBehaviour {
     public bool pressed;
     public bool solved = false;
     public bool bruh;
+    public bool screening = false;
     public float time;
     public string[] force = { "", "solved" };
     public string[] log = {"Red", "Green", "Blue", "Magenta", "Yellow", "Cyan", "White" };
@@ -155,6 +156,7 @@ public class FautlyBinary : MonoBehaviour {
         }
         GetComponent<KMSelectable>().AddInteractionPunch();
         screened = true;
+        screening = true;
         GetComponent<KMAudio>().PlaySoundAtTransform("screen", transform);
         for (int i = 0; i < 69; i++)
         {
@@ -162,10 +164,11 @@ public class FautlyBinary : MonoBehaviour {
             Displayed.color = _colors[Random.Range(0,7)];
         }
         Displayed.color = _colors[color2];
+        screening = false;
     }
     IEnumerator BottomPressed()
     {
-        if (!screened || bruh || solved)
+        if (!screened || bruh || solved || screening)
         {
             yield break;
         }

@@ -14,9 +14,10 @@ MonoBehaviour:
   id: BinMod
   title: Binary modules
   author: Lexa
-  description: "Simple pack of 4 similar modules.\nSpecial thanks to River, who very
-    helped me with that.\n\nThis mod contains:\nBinary\nBroken Binary\nFaulty Binary\nCruel
-    binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\r\nManual: <some text>"
+  description: "Simple pack of 4 similar modules based on binary.\n\nSpecial thanks
+    to River, who very helped me with that.\n\nThis mod contains:\nBinary\nBroken
+    Binary\nFaulty Binary\nCruel binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\r\nManual
+    can be founded in: https://ktane.timwi.de/\n\n"
   version: 2.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: a94ae0b9ca278d74a9fc7f9d3e75d7d9, type: 3}

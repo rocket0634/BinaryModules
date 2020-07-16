@@ -35,7 +35,7 @@ public class Binary : MonoBehaviour {
     "PURPLE", "QUEBEC", "SHOULD", "SIERRA", "SOURCE", "STRIKE", "SUBMIT", "TWITCH", "VICTOR", "VIOLET", "WINDOW", "YELLOW", "YANKEE", "CHARLIE", "EPSILON", "EXPLODE",
     "FOXTROT", "JULIETT", "MEASURE", "MISSION", "OMICRON", "SUBJECT", "UNIFORM", "UPSILON", "WHISKEY", "DETONATE", "NOTSOLVE", "NOVEMBER"
     };
-    public string[] mLG = {"omg", "you", "pressed", "it", "ur", "so", "cool", "true", "expert", "our", "new", "hero", "wow", "(just solve it)", "(just solve it)", "(just solve it)" };
+    public string[] _mLG = {"omg", "you", "pressed", "it", "ur", "so", "cool", "true", "expert", "our", "new", "hero", "wow", "poggers", "just solve it", "just solve it" };
     private bool active;
     private int te;
     private bool sol;
@@ -174,7 +174,7 @@ public class Binary : MonoBehaviour {
             yield return new WaitForSeconds(0.05f);
             if (i % 10 == 0)
             {
-                Slovo.text = mLG[i/10];
+                Slovo.text = _mLG[i/10];
             }
         }
         mgling = false;
@@ -208,9 +208,11 @@ public class Binary : MonoBehaviour {
             }
             else if (mgled && !mgling)
             {
+                mgling = true;
                 Slovo.text = "nope";
                 yield return new WaitForSeconds(.5f);
                 Slovo.text = wordList[te];
+                mgling = false;
             }
         }
         if (split.Length >= 2 && split[0].StartsWith("submit"))
@@ -248,9 +250,12 @@ public class Binary : MonoBehaviour {
 
     private IEnumerator TwitchHandleForcedSolve()
     {
-        var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(wordList[te]));
-        // This sends the command through the TP coroutine
-        while (TPCoroutine.MoveNext())
-            yield return TPCoroutine.Current;
+
+        
+            var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(wordList[te]));
+            // This sends the command through the TP coroutine
+            while (TPCoroutine.MoveNext())
+                yield return TPCoroutine.Current;
+        
     }
 }

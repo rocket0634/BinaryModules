@@ -56,7 +56,7 @@ public class BrokenBinary : MonoBehaviour
     public string[] _WordList = { "GHOST", "GIANT",  "ULTRA", "SUPER",
         "HYPER", "INDIA", "APLHA", "SIMON",
     "STICK", "MARIO", "LUCKY", "DISCO", "BRAVO",
-    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "COULD", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
+    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "CHAIR", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
     "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "LEMON", "MONTH", "MORSE", "NORTH", "OMEGA",
     "OSCAR", "PANIC", "PRESS", "ROMEO", "SEVEN", "SIGMA", "SMASH", "SOUTH", "TANGO", "TIMER", "VOICE", "WHILE",
     "WHITE", "WORLD", "WORRY", "WOULD"};
@@ -378,7 +378,7 @@ public class BrokenBinary : MonoBehaviour
         Up.text = "";
         Bottom.text = "";
         cheater = true;
-        Debug.LogFormat("[Broken Binary #{0}] You pressed nothing but you used solved command. Cheater.", _moduleID);
+        Debug.LogFormat("[Broken Binary #{0}] Module solved?!", _moduleID);
         StartCoroutine(solved());
         yield return null;
     }
