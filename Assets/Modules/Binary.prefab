@@ -580,7 +580,7 @@ Transform:
   m_GameObject: {fileID: 1293434555614570}
   m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.00000013315805}
   m_LocalPosition: {x: 0.0006, y: 0.0004000001, z: 0.0052999994}
-  m_LocalScale: {x: 0.0033333334, y: 0.0033333334, z: 0.033333335}
+  m_LocalScale: {x: 0.004, y: 0.0033333334, z: 0.033333335}
   m_Children: []
   m_Father: {fileID: 4992424857343880}
   m_RootOrder: 1
@@ -593,7 +593,7 @@ Transform:
   m_GameObject: {fileID: 1828795844454850}
   m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.00000013315805}
   m_LocalPosition: {x: 0.0008, y: 0.0006, z: 0.0053}
-  m_LocalScale: {x: 0.0033333334, y: 0.0033333309, z: 0.033333313}
+  m_LocalScale: {x: 0.004, y: 0.0033333309, z: 0.033333313}
   m_Children: []
   m_Father: {fileID: 4933009581020302}
   m_RootOrder: 0
@@ -677,7 +677,7 @@ Transform:
   m_GameObject: {fileID: 1488079563315750}
   m_LocalRotation: {x: 1, y: -0, z: 0, w: -0.00000013315805}
   m_LocalPosition: {x: 0.0003, y: 0.0004, z: 0.0053}
-  m_LocalScale: {x: 0.0033333334, y: 0.0033333334, z: 0.033333335}
+  m_LocalScale: {x: 0.004, y: 0.0033333334, z: 0.033333335}
   m_Children: []
   m_Father: {fileID: 4212551649079946}
   m_RootOrder: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   - DETONATE
   - NOTSOLVE
   - NOVEMBER
-  mLG:
+  _mLG:
   - omg
   - you
   - pressed
@@ -1799,9 +1799,9 @@ MonoBehaviour:
   - new
   - hero
   - wow
-  - (just solve it)
-  - (just solve it)
-  - (just solve it)
+  - poggers
+  - just solve it
+  - just solve it
 --- !u!114 &114347360327347054
 MonoBehaviour:
   m_ObjectHideFlags: 1
