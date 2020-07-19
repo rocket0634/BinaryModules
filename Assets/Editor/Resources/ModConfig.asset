@@ -16,8 +16,13 @@ MonoBehaviour:
   author: Lexa
   description: "Simple pack of 4 similar modules based on binary.\n\nSpecial thanks
     to River, who very helped me with that.\n\nThis mod contains:\nBinary\nBroken
-    Binary\nFaulty Binary\nCruel binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\r\nManuals
-    can be founded in: https://ktane.timwi.de/\n\n"
+    Binary\nFaulty Binary\nCruel binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\nGitHub
+    link: https://github.com/JeSuisFubEtHD/BinaryModules.git\n\r\nManuals can be found
+    in: https://ktane.timwi.de/\n\nIf you can't find manuals use these links:\n\nBinary:
+    https://drive.google.com/file/d/1PM73aLBUCipuevaASZjGS14DlKETGJer/view?usp=sharing\n\nBroken
+    Binary: https://drive.google.com/file/d/1fz6Ls58qRBQwtf429OZ6Uzb75HOXTFE2/view?usp=sharing\n\nCruel
+    Binary: https://drive.google.com/file/d/1Xbhc2Ta-kBT1fK-zECwR3zGuOZHSJyoy/view?usp=sharing\n\nFaulty
+    Binary: https://drive.google.com/file/d/1_a6KnBXvvKsYRhcOPoQ_CwS9317ey-Hs/view?usp=sharing"
   version: 2.0
   outputFolder: build
   previewImage: {fileID: 2800000, guid: a94ae0b9ca278d74a9fc7f9d3e75d7d9, type: 3}
