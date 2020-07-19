@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Faulty Binary — Keep Talking and Nobody Explodes Module</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <script src="js/ktane-utils.js"></script>
+    <style>
+        .clarification {
+            font-size: smaller;
+            font-weight: bold;
+        }
+
+            .clarification p {
+                margin-bottom: 0;
+            }
+
+            .clarification ul {
+                margin-top: 0;
+            }
+
+        .smaller {
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <div id="ManualContent">
+        <div class="section">
+            <div class="page page-bg-01">
+                <div class="page-header">
+                    <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                    <span class="page-header-section-title">Faulty Binary</span>
+                </div>
+                <div class="page-content">
+                    <img src="img/Component/Faulty Binary.svg" class="diagram">
+                    <h2>On the Subject of Faulty Binary</h2>
+                    <p class="flavour-text">If you try "00000000" you will strike. But if you try "00000000" you will win. You will like it.</p>
+                    <p>
+                        This module consist of 3 small buttons and 2 big buttons. 2 of small buttons is input buttons and has labels "0" or "1" (never both). 3rd small button is reset button and has
+                        "R" label. Top big button is submit button and has "send" label. Bottom big button is start button and has misspelt versions of "button" word on the label.
+                    </p>                    
+                    <p>To defuse module, press start button at the certain time and submit correct binary digit.</p>
+                    <p>
+                        <em><strong>If input buttons has different labels, you are looking for different module.</strong></em>
+                    </p>
+                    <h2>Step 1: Keys values</h2>
+                    <p>To complete last step, you have to input binary digits. Unfortunately, input buttons has same labels and you don't know which button inputs which digit.</p>
+                    <p>To figure out it, use table below. The top row is color of the displayed word and the left column is labels on the buttons. First digit of recevied number is left button's input, second digit of right button's input.</p>
+                    <table>
+                        <tr>
+                            <th> </th>
+                            <th>Red</th>
+                            <th>Green</th>
+                            <th>Blue</th>
+                            <th>Magenta</th>
+                            <th>Yellow</th>
+                            <th>Cyan</th>
+                            <th>White</th>
+                        </tr>
+                        <tr>
+                            <th>0</th>
+                            <th>01</th>
+                            <th>01</th>
+                            <th>10</th>
+                            <th>01</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>10</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>10</th>
+                            <th>01</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>01</th>
+                            <th>01</th>
+                            <th>10</th>
+                        </tr>
+                    </table>
+                    <p> </p>
+                    <h2>Step 2: Pressing start button</h2>
+                    <p>
+                        Firstly, note color of the displayed word, then press screen. You can't press start button until you presss screen. You also can't press start button in anytime.
+                        To figure out correct time, use table below where top row is text of displayed word and left column is text of start button. Then, press start button when last digit of the timer equal
+                        to the received digit. "#" sybmol means a random number.
+                        </p>
+                        <p><strong><em>Remember second color and text of displayed word before pressing start button.</em></strong></p>
+                    <p></p>
+                        <table>
+                            <tr>
+                                <th>Texts of diplay and start button</th>
+                                <th>Press #</th>
+                                <th>Im not sure</th>
+                                <th>Submit it</th>
+                                <th>Left?</th>
+                                <th>Press me</th>
+                                <th>Tap 1 then 0</th>
+                                <th>Tap 0 then 1</th>
+                                <th>##?</th>
+                                <th>Not that!</th>
+                                <th>???</th>
+                            </tr>
+                            <tr>
+                                <th>Rutton</th>
+                                <th>7</th>
+                                <th>4</th>
+                                <th>9</th>
+                                <th>4</th>
+                                <th>8</th>
+                                <th>7</th>
+                                <th>4</th>
+                                <th>8</th>
+                                <th>6</th>
+                                <th>9</th>
+                            </tr>
+                            <tr>
+                                <th>Buttoh</th>
+                                <th>9</th>
+                                <th>3</th>
+                                <th>1</th>
+                                <th>4</th>
+                                <th>9</th>
+                                <th>8</th>
+                                <th>4</th>
+                                <th>4</th>
+                                <th>4</th>
+                                <th>1</th>
+                            </tr>
+                            <tr>
+                                <th>Button</th>
+                                <th>8</th>
+                                <th>3</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>2</th>
+                                <th>9</th>
+                                <th>3</th>
+                                <th>6</th>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th>Buton</th>
+                                <th>3</th>
+                                <th>3</th>
+                                <th>0</th>
+                                <th>6</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>9</th>
+                                <th>3</th>
+                                <th>9</th>
+                                <th>0</th>
+                            </tr>
+                            <tr>
+                                <th>Batton</th>
+                                <th>4</th>
+                                <th>6</th>
+                                <th>1</th>
+                                <th>0</th>
+                                <th>8</th>
+                                <th>8</th>
+                                <th>3</th>
+                                <th>5</th>
+                                <th>3</th>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th>Buffon</th>
+                                <th>7</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>5</th>
+                                <th>5</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>5</th>
+                                <th>7</th>
+                            </tr>
+                            <tr>
+                                <th>Betton</th>
+                                <th>4</th>
+                                <th>0</th>
+                                <th>0</th>
+                                <th>6</th>
+                                <th>1</th>
+                                <th>4</th>
+                                <th>9</th>
+                                <th>3</th>
+                                <th>7</th>
+                                <th>4</th>
+                            </tr>
+                            <tr>
+                                <th>Butt()n</th>
+                                <th>9</th>
+                                <th>4</th>
+                                <th>6</th>
+                                <th>8</th>
+                                <th>8</th>
+                                <th>5</th>
+                                <th>9</th>
+                                <th>9</th>
+                                <th>2</th>
+                                <th>2</th>
+                            </tr>
+                            <tr>
+                                <th>Bruhton</th>
+                                <th>1</th>
+                                <th>3</th>
+                                <th>1</th>
+                                <th>9</th>
+                                <th>1</th>
+                                <th>4</th>
+                                <th>9</th>
+                                <th>8</th>
+                                <th>5</th>
+                                <th>5</th>
+                            </tr>
+                            <tr>
+                                <th>Bu11on</th>
+                                <th>2</th>
+                                <th>1</th>
+                                <th>9</th>
+                                <th>2</th>
+                                <th>7</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>3</th>
+                                <th>3</th>
+                                <th>1</th>
+                            </tr>
+                        </table>
+                    
+                </div>
+           
+                <div class="page-footer relative-footer">Page 1 of 2</div>
+            </div>
+            <div class="page page-bg-02">
+                <div class="page-header">
+                    <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                    <span class="page-header-section-title">Faulty Binary</span>
+                </div>
+                <div class="page-content">
+                    <h2>Step 3: Submitting binary</h2>
+                    <p>
+                        Once, you have successfully pressed start button, you can submit your binary number. You have to calculate it, however.
+                        To figure out your answer, use table below, where top row is text of displayed word, bottom row is text of start button, left column if first and last color of displayed word. Using this table, obtain 4 cells. Add up each number in that cells, modulo 256. Convert obtained number to binary and submit that.
+                    </p>
+                    <div class="smaller">
+                        
+                            <table>
+                                <tr>
+                                    <th> </th>
+                                    <th>Press #</th>
+                                    <th>Im not sure</th>
+                                    <th>Submit it</th>
+                                    <th>Left?</th>
+                                    <th>Press me</th>
+                                    <th>Tap 1 then 0</th>
+                                    <th>Tap 0 then 1</th>
+                                    <th>##?</th>
+                                    <th>Not that!</th>
+                                    <th>???</th>
+                                </tr>
+                                <tr>
+                                    <th>Red</th>
+                                    <th>104</th>
+                                    <th>90</th>
+                                    <th>72</th>
+                                    <th>58</th>
+                                    <th>83</th>
+                                    <th>43</th>
+                                    <th>43</th>
+                                    <th>126</th>
+                                    <th>52</th>
+                                    <th>97</th>
+                                </tr>
+                                <tr>
+                                    <th>Green</th>
+                                    <th>128</th>
+                                    <th>122</th>
+                                    <th>125</th>
+                                    <th>93</th>
+                                    <th>109</th>
+                                    <th>121</th>
+                                    <th>49</th>
+                                    <th>121</th>
+                                    <th>64</th>
+                                    <th>67</th>
+                                </tr>
+                                <tr>
+                                    <th>Blue</th>
+                                    <th>48</th>
+                                    <th>112</th>
+                                    <th>117</th>
+                                    <th>110</th>
+                                    <th>58</th>
+                                    <th>63</th>
+                                    <th>79</th>
+                                    <th>124</th>
+                                    <th>65</th>
+                                    <th>90</th>
+                                </tr>
+                                <tr>
+                                    <th>Magenta</th>
+                                    <th>73</th>
+                                    <th>51</th>
+                                    <th>112</th>
+                                    <th>54</th>
+                                    <th>75</th>
+                                    <th>38</th>
+                                    <th>35</th>
+                                    <th>43</th>
+                                    <th>48</th>
+                                    <th>43</th>
+                                </tr>
+                                <tr>
+                                    <th>Yellow</th>
+                                    <th>89</th>
+                                    <th>98</th>
+                                    <th>47</th>
+                                    <th>85</th>
+                                    <th>109</th>
+                                    <th>106</th>
+                                    <th>95</th>
+                                    <th>126</th>
+                                    <th>79</th>
+                                    <th>118</th>
+                                </tr>
+                                <tr>
+                                    <th>Cyan</th>
+                                    <th>54</th>
+                                    <th>104</th>
+                                    <th>108</th>
+                                    <th>82</th>
+                                    <th>88</th>
+                                    <th>68</th>
+                                    <th>99</th>
+                                    <th>126</th>
+                                    <th>32</th>
+                                    <th>90</th>
+                                </tr>
+                                <tr>
+                                    <th>White</th>
+                                    <th>79</th>
+                                    <th>85</th>
+                                    <th>106</th>
+                                    <th>109</th>
+                                    <th>37</th>
+                                    <th>37</th>
+                                    <th>63</th>
+                                    <th>50</th>
+                                    <th>65</th>
+                                    <th>91</th>
+                                </tr>
+                                <tr>
+                                    <th> </th>
+                                    <th>Rutton</th>
+                                    <th>Buttoh</th>
+                                    <th>Button</th>
+                                    <th>Buton</th>
+                                    <th>Batton</th>
+                                    <th>Buffon</th>
+                                    <th>Betton</th>
+                                    <th>Butt()n</th>
+                                    <th>Bruhton</th>
+                                    <th>Bu11on</th>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+                            <div class="page-footer relative-footer">Page 2 of 2</div>
+                        </div>
+                    </div>
+        </div>
+</body>
+</html>

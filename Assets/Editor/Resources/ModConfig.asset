@@ -16,7 +16,7 @@ MonoBehaviour:
   author: Lexa
   description: "Simple pack of 4 similar modules based on binary.\n\nSpecial thanks
     to River, who very helped me with that.\n\nThis mod contains:\nBinary\nBroken
-    Binary\nFaulty Binary\nCruel binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\r\nManual
+    Binary\nFaulty Binary\nCruel binary\n\nMod ID: BinMod\n\r\nCreated by: lexa\r\n\r\nManuals
     can be founded in: https://ktane.timwi.de/\n\n"
   version: 2.0
   outputFolder: build
