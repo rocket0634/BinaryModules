@@ -1625,7 +1625,6 @@ MonoBehaviour:
   - 
   word: 
   word1: 
-  curr: 0
   red: {r: 1, g: 0, b: 0, a: 1}
   green: {r: 0.034482718, g: 1, b: 0, a: 1}
   stepcycle: -1
@@ -1639,20 +1638,15 @@ MonoBehaviour:
   cheater: 0
   shift: 0
   awaked: 0
-  WD: well done
-  WD1: 
-  strike:
-  - Too Bad
-  - 
   shifted: 0
-  _WordList:
+  WordList:
   - GHOST
   - GIANT
   - ULTRA
   - SUPER
   - HYPER
   - INDIA
-  - APLHA
+  - ALPHA
   - SIMON
   - STICK
   - MARIO
@@ -1662,12 +1656,14 @@ MonoBehaviour:
   - ABORT
   - ABOUT
   - BLACK
+  - BEAST
   - CLOCK
   - CLOSE
   - CHAIR
   - CRASH
   - DELTA
   - DIGIT
+  - DEMON
   - EIGHT
   - GAMMA
   - GLASS
@@ -1677,8 +1673,6 @@ MonoBehaviour:
   - INDIA
   - KAPPA
   - LATER
-  - LEAST
-  - LEMON
   - MONTH
   - MORSE
   - NORTH

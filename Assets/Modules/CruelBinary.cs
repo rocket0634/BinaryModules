@@ -293,6 +293,7 @@ public class CruelBinary : MonoBehaviour
     }
     private IEnumerator TwitchHandleForcedSolve()
     {
+        Debug.LogFormat("[Cruel Binary #{0}] That module was autosolved. If you didn't use solve command, report about it.", _moduleID);
         if (!read)
         {
             Read.OnInteract();

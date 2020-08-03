@@ -33,7 +33,6 @@ public class BrokenBinary : MonoBehaviour
     public string[] chars;
     public string word;
     public string word1;
-    public int curr;
     public Color red;
     public Color green;
     public int stepcycle = -1;
@@ -47,17 +46,14 @@ public class BrokenBinary : MonoBehaviour
     public bool cheater = false;
     public int shift;
     public bool awaked = false;
-    public string WD = "well done";
-    public string WD1 = "";
-    public string[] strike = { "Too Bad", "" };
     public char shifted;
     Random rnd = new Random();
 
     public string[] _WordList = { "GHOST", "GIANT",  "ULTRA", "SUPER",
-        "HYPER", "INDIA", "APLHA", "SIMON",
+        "HYPER", "INDIA", "ALPHA", "SIMON",
     "STICK", "MARIO", "LUCKY", "DISCO", "BRAVO",
-    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "CHAIR", "CRASH", "DELTA", "DIGIT", "EIGHT", "GAMMA", "GLASS",
-    "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "LEMON", "MONTH", "MORSE", "NORTH", "OMEGA",
+    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "CHAIR", "CRASH", "DELTA", "DIGIT", "DEMON", "EIGHT", "GAMMA", "GLASS",
+    "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "MONTH", "MORSE", "NORTH", "OMEGA",
     "OSCAR", "PANIC", "PRESS", "ROMEO", "SEVEN", "SIGMA", "SMASH", "SOUTH", "TANGO", "TIMER", "VOICE", "WHILE",
     "WHITE", "WORLD", "WORRY", "WOULD"};
 
@@ -250,55 +246,43 @@ public class BrokenBinary : MonoBehaviour
     IEnumerator check()
     {
         Debug.LogFormat("[Broken Binary #{0}] You submitted " + input, _moduleID);
-        if (word == input)
+        GetComponent<KMAudio>().PlaySoundAtTransform("NextStage", transform);
+        for (int i = 0; i < 5; i++)
         {
-            if (curr != 2)
-            {
-                Debug.LogFormat("[Broken Binary #{0}] Thats correct", _moduleID);
-                curr++;
-                input = "";
-                GetComponent<KMAudio>().PlaySoundAtTransform("NextStage", transform);
-                Slovo.text = curr + " of 3 done";
-                yield return new WaitForSeconds(1f);
-                Slovo.text = "";
-                disordered = "01234";
-                pressed = 0;
-                c1 = false;
-                c2 = false;
-                c3 = false;
-                c4 = false;
-                c5 = false;
-                stepcycle = -1;
-
-                word = _WordList[Random.Range(0, 53)];
-                for (int i = 0; i < 5; i++)
-                {
-                    char c = word[i];
-                    chars[i] = Convert.ToString(c, 2).PadLeft(8, '0');
-
-                }
-                StartCoroutine(scramble());
-            }
-            else
-            {
+            Slovo.text += input[i];
+            yield return new WaitForSeconds(0.5f);
+        }
+        if (word == input)
+        {               
                 Debug.LogFormat("[Broken Binary #{0}] Thats correct", _moduleID);
                 StartCoroutine(solved());
-            }
+            
         }
         else if (word != input)
         {
             Debug.LogFormat("[Broken Binary #{0}] Thats incorrect", _moduleID);
             Slovo.color = red;
 
-            Slovo.text = strike[0];
             Module.HandleStrike();
-            for (int i = 1; i < 16; i++)
-            {
-                yield return new WaitForSeconds(0.075f);
-                Slovo.text = strike[i % 2];
-            }
-            Slovo.color = green;
             yield return new WaitForSeconds(1f);
+            for (int i = 3; i >= -5; i--)
+            {
+                yield return new WaitForSeconds(0.05f);
+                if (i > 0)
+                {
+                    Slovo.text = input.Substring(0, i);
+                }
+                else if (i == 0)
+                {
+                    Slovo.text = "";
+                }
+                else
+                {
+                    Slovo.text = word.Substring(0, Math.Abs(i));
+                }
+            }
+            yield return new WaitForSeconds(1f);
+            Slovo.color = green;
             input = "";
             disordered = "01234";
             pressed = 0;
@@ -328,21 +312,14 @@ public class BrokenBinary : MonoBehaviour
     IEnumerator solved()
     {
         input = "";
-        if (!cheater)
-        {
-            Slovo.text = "Well Done";
-        }
-        else 
-        {
-            Slovo.text = "Cheater";
-        }
-        GetComponent<KMAudio>().PlaySoundAtTransform("NextStage", transform);
-        yield return new WaitForSeconds(1f);
-        Slovo.text = "";
         GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.CorrectChime, transform);
         Module.HandlePass();
-        Debug.LogFormat("[Broken Binary #{0}] Module solved!", _moduleID);
+        if (!cheater)
+        {
+            Debug.LogFormat("[Broken Binary #{0}] Module solved!", _moduleID);
+        }
         solvedd = true;
+        yield return null;
     }
     private string TwitchHelpMessage = "To press small top buttons, use !{0} L(left), M(middle), R(right). To press bottom buttons use !{0} T(top), B(bottom)";
     public IEnumerator ProcessTwitchCommand(string command)
@@ -366,7 +343,6 @@ public class BrokenBinary : MonoBehaviour
     }
     private IEnumerator TwitchHandleForcedSolve()
     {
-        curr = 2;
         c1 = true;
         c2 = true;
         c3 = true;
@@ -378,7 +354,7 @@ public class BrokenBinary : MonoBehaviour
         Up.text = "";
         Bottom.text = "";
         cheater = true;
-        Debug.LogFormat("[Broken Binary #{0}] Module solved?!", _moduleID);
+        Debug.LogFormat("[Broken Binary #{0}] That module was autosolved. If you didn't use solve command, report about it.", _moduleID);
         StartCoroutine(solved());
         yield return null;
     }

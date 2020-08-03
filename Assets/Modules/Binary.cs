@@ -251,8 +251,8 @@ public class Binary : MonoBehaviour {
     private IEnumerator TwitchHandleForcedSolve()
     {
 
-        
-            var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(wordList[te]));
+        Debug.LogFormat("[Binary #{0}] That module was autosolved. If you didn't use solve command, report about it.", _moduleID);
+        var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(wordList[te]));
             // This sends the command through the TP coroutine
             while (TPCoroutine.MoveNext())
                 yield return TPCoroutine.Current;

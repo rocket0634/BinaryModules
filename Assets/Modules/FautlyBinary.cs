@@ -223,12 +223,12 @@ public class FautlyBinary : MonoBehaviour {
             Awake();
         }
     }
-    private string TwitchHelpMessage = "!{0} press screen [to press on screen] !{0} start on #[pressing start button at specific time] !{0} submit llllrrrr [pressing left/right input buttons]";
+    private string TwitchHelpMessage = "!{0} press screen/screen [to press on screen] !{0} start on #[pressing start button at specific time] !{0} submit llllrrrr [pressing left/right input buttons] !{0} reset [to reset your input]";
     private IEnumerator ProcessTwitchCommand(string command)
     {
         command = command.ToLowerInvariant().Trim();
         var split = command.Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
-        if (split.Length == 2 && split[0].StartsWith("press") && split[1].StartsWith("screen"))
+        if ((split.Length == 2 && split[0].StartsWith("press") && split[1].StartsWith("screen")) || (split.Length == 1 && split[0].StartsWith("screen")))
         {
             yield return new WaitForSeconds(0.05f);
             Display.OnInteract();
@@ -252,31 +252,39 @@ public class FautlyBinary : MonoBehaviour {
                 yield return new WaitForSeconds(.1f);
             }
         }
+        else if (split.Length == 1 && split[0].StartsWith("reset"))
+        {
+            yield return new WaitForSeconds(1.0f);
+            R.OnInteract();
+            yield return null;
+        }
         else if (split.Length == 2 && split[0].StartsWith("submit"))
         {
-            string code = split[1];
-            if (code.Any(letter => !letter.EqualsAny('l', 'r')) || code.Length != 8)
+            string code = split[1]; 
+            if (code.Any(letter => letter.EqualsAny('l', 'r')) && code.Length < 8)
             {
-                yield break;
+                yield return "sendtochat Sorry, there is not enough digits! If your answer lower than 10000000, add zeros before your number to make 8 digits.";
             }
+            else if (code.Any(letter => letter.EqualsAny('l', 'r')) && code.Length == 8)
                 foreach (char c in code)
-               {
-                yield return new WaitForSeconds(.1f);
-                if (c == 'l')
                 {
-                    B[0].OnInteract();
+                    yield return new WaitForSeconds(.1f);
+                    if (c == 'l')
+                    {
+                        B[0].OnInteract();
+                    }
+                    else if (c == 'r')
+                    {
+                        B[1].OnInteract();
+                    }
                 }
-                else if (c == 'r')
-                {
-                    B[1].OnInteract();
-                }               
-               }
             Send.OnInteract();
-            yield return false;
+            yield return null;
         }
     }
     private IEnumerator TwitchHandleForcedSolve()
     {
+        Debug.LogFormat("[Faulty Binary #{0}] That module was autosolved. If you didn't use solve command please report about it.", _moduleID);
         Displayed.text = "solved";
         GetComponent<KMAudio>().PlaySoundAtTransform("ForceSolve", transform);
         module.HandlePass();
