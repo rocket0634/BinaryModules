@@ -21,7 +21,7 @@ public class Binary : MonoBehaviour {
     string solved = "Solved";
 
     private string text;
-    public List<string> wordList = new List<string>
+    public List<string> _wordList = new List<string>
     {
         "AH", "AT", "AM", "AS", "AN", "BE", "BY", "GO", "IF", "IN", "IS", "IT", "MU", "NU", "NO", "NU", "OF", "PI", "TO", "UP", "US", "WE", "XI",
         "ACE", "AIM", "AIR", "BED", "BOB", "BUT", "BUY", "CAN", "CAT", "CHI", "CUT", "DAY", "DIE", "DOG", "DOT", "EAT", "EYE", "FOR", "FLY", "GET",
@@ -52,7 +52,7 @@ public class Binary : MonoBehaviour {
         text = "";
         Slovo.text = "";
         te = UnityEngine.Random.Range(0,202);
-        word = wordList[te];
+        word = _wordList[te];
         B0.OnInteract += delegate ()
         {
             vc("0");
@@ -152,7 +152,7 @@ public class Binary : MonoBehaviour {
             Debug.LogFormat("[Binary #{0}] Resetting module", _moduleID);
             text = "";
             te = UnityEngine.Random.Range(0, 202);
-            word = wordList[te];
+            word = _wordList[te];
             Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, word);
             Slovo.text = word;
         }
