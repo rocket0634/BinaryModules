@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 1836670622
-  Title: Binary
-  Tags: []
+  Title: Binary modules
+  Tags:
+  - Regular Module
+  - Missions

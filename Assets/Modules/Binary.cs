@@ -17,6 +17,7 @@ public class Binary : MonoBehaviour {
     public Color[] _colors;
     public bool mgled;
     public bool mgling;
+    public string word;
     string solved = "Solved";
 
     private string text;
@@ -51,6 +52,7 @@ public class Binary : MonoBehaviour {
         text = "";
         Slovo.text = "";
         te = UnityEngine.Random.Range(0,202);
+        word = wordList[te];
         B0.OnInteract += delegate ()
         {
             vc("0");
@@ -76,25 +78,26 @@ public class Binary : MonoBehaviour {
             vc(null);
             return false;
         };
-        Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, wordList[te]);
+
+        Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, word);
 
         // This is defined by the game3
         // This is when the lights turn on
         Module.OnActivate += delegate ()
         {
-            Slovo.text = wordList[te];
+            Slovo.text = word;
             active = true;
         };
     }
     void Update()
-    { 
+    {
         if(!active || sol || mgling)
         {
             return;
         }
         if (text == "")
         {
-            Slovo.text = wordList[te];
+            Slovo.text = word;
         }
         else
         {
@@ -116,7 +119,7 @@ public class Binary : MonoBehaviour {
                 break;
             case "r":
                 text = "";
-                Slovo.text = wordList[te];
+                Slovo.text = word;
                 Debug.LogFormat("[Binary #{0}] The module has been reset.", _moduleID);
                 break;
         }
@@ -132,7 +135,7 @@ public class Binary : MonoBehaviour {
         if (!vc(null))
             return;
         Debug.LogFormat("[Binary #{0}] Sent: {1}", _moduleID, text);
-        string match = CheckBinary(wordList[te]);
+        string match = CheckBinary(word);
         if (text == match)
         {
             sol = true;
@@ -149,8 +152,9 @@ public class Binary : MonoBehaviour {
             Debug.LogFormat("[Binary #{0}] Resetting module", _moduleID);
             text = "";
             te = UnityEngine.Random.Range(0, 202);
-            Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, wordList[te]);
-            Slovo.text = wordList[te];
+            word = wordList[te];
+            Debug.LogFormat("[Binary #{0}] Selected word: {1}", _moduleID, word);
+            Slovo.text = word;
         }
     }
 
@@ -178,7 +182,7 @@ public class Binary : MonoBehaviour {
             }
         }
         mgling = false;
-        Slovo.text = wordList[te];
+        Slovo.text = word;
         Slovo.color = _colors[3];
     }
     IEnumerator SolveAnim()
@@ -211,7 +215,7 @@ public class Binary : MonoBehaviour {
                 mgling = true;
                 Slovo.text = "nope";
                 yield return new WaitForSeconds(.5f);
-                Slovo.text = wordList[te];
+                Slovo.text = word;
                 mgling = false;
             }
         }
@@ -252,7 +256,7 @@ public class Binary : MonoBehaviour {
     {
 
         Debug.LogFormat("[Binary #{0}] That module was autosolved. If you didn't use solve command, report about it.", _moduleID);
-        var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(wordList[te]));
+        var TPCoroutine = ProcessTwitchCommand("submit " + CheckBinary(word));
             // This sends the command through the TP coroutine
             while (TPCoroutine.MoveNext())
                 yield return TPCoroutine.Current;

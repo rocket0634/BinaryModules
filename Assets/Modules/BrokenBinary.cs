@@ -32,7 +32,6 @@ public class BrokenBinary : MonoBehaviour
     public string CR;
     public string[] chars;
     public string word;
-    public string word1;
     public Color red;
     public Color green;
     public int stepcycle = -1;
@@ -49,13 +48,13 @@ public class BrokenBinary : MonoBehaviour
     public char shifted;
     Random rnd = new Random();
 
-    public string[] _WordList = { "GHOST", "GIANT",  "ULTRA", "SUPER",
-        "HYPER", "INDIA", "ALPHA", "SIMON",
-    "STICK", "MARIO", "LUCKY", "DISCO", "BRAVO",
-    "ABORT", "ABOUT", "BLACK", "BEAST", "CLOCK", "CLOSE", "CHAIR", "CRASH", "DELTA", "DIGIT", "DEMON", "EIGHT", "GAMMA", "GLASS",
-    "GREEN", "GUESS", "HOTEL", "INDIA", "KAPPA", "LATER", "MONTH", "MORSE", "NORTH", "OMEGA",
-    "OSCAR", "PANIC", "PRESS", "ROMEO", "SEVEN", "SIGMA", "SMASH", "SOUTH", "TANGO", "TIMER", "VOICE", "WHILE",
-    "WHITE", "WORLD", "WORRY", "WOULD"};
+    public string[] WordList = {
+    "ABORT", "ABOUT", "ALERT", "ALPHA", "ALTER", "BLACK", "BASTE", "BEAST", "BEATS", "BLOCK", "BRAVO", "CLOCK", "CLOSE",
+    "CHAIR", "CRASH", "DEALT", "DELTA", "DIGIT", "DISCO", "EIGHT", "EVENS", "GAMMA", "GENRE", "GHOST", "GIANT", "GLASS",
+    "GOTHS", "GREEN", "GUESS", "HOTEL", "HYPER", "INDIA", "KAPPA", "LATER", "LEMON", "LUCKY", "MAGMA", "MARIO", "MELON",
+    "MERIT", "MONTH", "MORSE", "NORTH", "OMEGA", "OSCAR", "PANIC", "PRESS", "PURSE", "ROMEO", "SEVEN", "SHOUT", "SIGMA",
+    "SIMON", "SMASH", "SOUTH", "STICK", "SUPER", "TANGO", "THORN", "TICKS", "TIMER", "ULTRA", "VOICE", "WHILE", "WHITE",
+    "WORLD", "WORRY", "WOULD"};
 
 
     private static int _moduleIDCounter = 1;
@@ -69,7 +68,7 @@ public class BrokenBinary : MonoBehaviour
             
             _moduleID = _moduleIDCounter++;
             awaked = true;
-            word = _WordList[Random.Range(0, 53)];
+            word = WordList[Random.Range(0, 68)];
             for (int i = 0; i < 5; i++)
             {
                 char c = word[i];
@@ -252,13 +251,20 @@ public class BrokenBinary : MonoBehaviour
             Slovo.text += input[i];
             yield return new WaitForSeconds(0.5f);
         }
-        if (word == input)
-        {               
+        if (WordList.Contains(input))
+        {
+            if (input == word)
+            {
                 Debug.LogFormat("[Broken Binary #{0}] Thats correct", _moduleID);
+            }
+            else
+            {
+                Debug.LogFormat("[Broken Binary #{0}] That's a anagram word but still correct", _moduleID);
+            }
                 StartCoroutine(solved());
             
         }
-        else if (word != input)
+        else if (!WordList.Contains(input))
         {
             Debug.LogFormat("[Broken Binary #{0}] Thats incorrect", _moduleID);
             Slovo.color = red;
@@ -293,7 +299,7 @@ public class BrokenBinary : MonoBehaviour
             c5 = false;
             stepcycle = -1;
             Slovo.text = "";
-            word = _WordList[Random.Range(0, 53)];
+            word = WordList[Random.Range(0, 68)];
 
             for (int i = 0; i < 5; i++)
             {
